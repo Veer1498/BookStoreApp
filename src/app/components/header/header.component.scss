@@ -1,0 +1,52 @@
+.header-content{
+    background-color: maroon;
+    padding: 10px 5px 0 0;
+   
+
+}
+.book-logo{
+    width: 0.8cm;
+    padding: 2px 5px 2px 2px;
+    margin-left: 10%;
+    cursor: pointer;
+}
+.header-name{
+    padding: 2px;
+    margin-top: 12px;
+    padding-bottom: 20px;
+    color: white;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-size: large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.book{
+    display: flex;
+}
+.search{
+    width: 400%;
+    margin-left: 20%;
+    padding: 7px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.search-logo{
+    width: 5%;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.cart-name{
+    padding-left: 500px;
+    margin-left: 30%;
+    margin-top: 12px;
+    cursor: pointer;
+    font-size: larger;
+    color: white;
+}
+.cart-logo{
+    size: 10px;
+    margin-left: 30%;
+    margin-top: 12px;
+    cursor:pointer;
+}

@@ -1,0 +1,66 @@
+<mat-vertical-stepper>
+  <mat-step label="My Cart">
+      <div class="part1">
+          <div class="book-image"><img class="book-pic" src="https://booklistqueen.com/wp-content/uploads/i-know-why-the-caged-birds-sing-maya-angelou.jpg" alt=""></div>
+          <div>
+              <div class="book-title">Caged Bird</div>
+              <div class="auther-name">By Veer</div>
+              <div class="book-price">Rs.350</div>
+              <div class="part2">
+              <button class="minus" style="height: 20px;border: gray;  border-radius: 50px;" (click)="decrease()" >-</button>
+              <label  class="number" type="text"style="padding: 0 0 5px 5px;"> {{cartValue}} </label>
+              <button class="plus" style="height: 20px;border: gray;  border-radius: 50px;" (click)="incresase()" >+</button>
+              <span class="remove-text">Remove</span>
+              </div>    
+          </div>
+      </div>
+      <button mat-raised-button class="select-address" matStepperNext >Place Order</button>
+  </mat-step>
+
+  <mat-step label="Customer Details">
+      <div class="cust-detail">
+          <div>
+          <input class="text-input" type="text" name="name" placeholder="Name">
+          <input class="text-input" type="text" name="phoneno" placeholder="Phone number">
+          </div>
+          <div>
+          <input class="text-input" type="text" name="pincode" placeholder="Pin Code">
+          <input class="text-input" type="text" name="locality" placeholder="Locality">
+          </div>
+          <div>
+          <input class="address-input" type="text" name="address" placeholder="Address">
+          </div>
+          <div>
+          <input class="text-input" type="text" name="city" placeholder="City/Town">
+          <input class="text-input" type="text" name="landmark" placeholder="Landmark">
+          </div>
+          <div class="type">
+          Type<br>
+              <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="Home">Home</mat-radio-button>
+                  <mat-radio-button value="Office">Office</mat-radio-button>
+                  <mat-radio-button value="Others">Others</mat-radio-button>
+              </mat-radio-group>
+          </div>
+          <div>
+          <button mat-button class="back-btn" matStepperPrevious> </button>
+          <button mat-raised-button class="next-btn" matStepperNext >Continue</button>
+          </div>
+      </div>
+  </mat-step>
+
+  <mat-step label="Order Summary">
+      <div class="payment">
+          <div class="book-image"><img class="book-summary" src="https://booklistqueen.com/wp-content/uploads/i-know-why-the-caged-birds-sing-maya-angelou.jpg" alt=""></div>
+          <div>
+          <div class="book-title-summary">Caged Bird</div>
+          <div class="auther-name-summary">By Veer</div>
+          <div class="book-price-summary">Rs.350</div>
+          </div>
+      </div>
+      <div>
+      <button mat-button class="back-btn" matStepperPrevious> </button>
+      <button mat-raised-button class="checkout-btn" matStepperNext (click)="onCheckout()">Checkout</button>
+      </div>
+  </mat-step>
+</mat-vertical-stepper>
