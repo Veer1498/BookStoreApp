@@ -1,8 +1,8 @@
 # BookStoreApp
 
 Created By: Veer
-
-It consists of whole Frontend Side Logics and Page Responses.
+This is for FrontEnd of Book Store App <br>
+It consists of whole Frontend Side Logics and Page Responses.<br>
 The Service controls calling HTTP Requests in Backend and doing CRUD Operations in DataBase
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
