@@ -1,16 +1,10 @@
 
-
-.book2{
-  grid-row: 1;
-  grid-column: 2;
+.books{
+  display: inline-flex;
+  flex-direction: row;
 }
-.book3{
-  grid-row: 1;
-  grid-column: 3;
-}
-.book4{
-  grid-row: 1;
-  grid-column: 4;
+.main-content{
+  padding-left: 200px;
 }
 .book{
   background-color:#eeeeee;
@@ -19,7 +13,7 @@
   border-radius: 5px;
   padding-top: 10px;
   border-style:ridge;
-  border-width: 1px;
+  border-width: 2px;
   
 }
 .book-content{
@@ -37,7 +31,8 @@
   font-size: small;
 }
 .sort-content{
-  margin-left: 76.3%;
+  margin-left: 68.3%;
+  padding: 10px;
 }
 mat-card{
   display: grid;
@@ -63,12 +58,16 @@ mat-card{
   width: 2.7cm;
 }
 .wishlist{
-  margin-left: 5px;
+  margin-left: 20px;
   background-color: white;
 }
 
 img{
   width: 60%;
   padding-left: 55px;
+  padding-bottom: 10px;
 
+}
+.actions{
+  margin-bottom: 20px;
 }
