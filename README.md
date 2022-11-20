@@ -1,5 +1,10 @@
 # BookStoreApp
 
+Created By: Veer
+
+It consists of whole Frontend Side Logics and Page Responses.
+The Service controls calling HTTP Requests in Backend and doing CRUD Operations in DataBase
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
 
 ## Development server
