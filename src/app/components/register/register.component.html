@@ -5,30 +5,30 @@
             <form class="example-form">
                 <mat-form-field class="example-full-width">
                   <mat-label>First Name</mat-label>
-                  <input matInput  >
+                  <input matInput [(ngModel)]="userReg.firstName" name="firstName"  >
                 </mat-form-field>
               
                 <mat-form-field class="example-full-width">
                   <mat-label>Last Name</mat-label>
-                  <input matInput>
+                  <input matInput [(ngModel)]="userReg.lastName" name="lastName">
                 </mat-form-field>
 
                 <mat-form-field class="example-full-width">
                     <mat-label>Email</mat-label>
-                    <input matInput placeholder="Ex. xyz@abc.com" >
+                    <input matInput [(ngModel)]="userReg.emailId" name="emailId" placeholder="Ex. xyz@abc.com" >
                   </mat-form-field>
                 
                   <mat-form-field class="date">
                     <mat-label>Date Of Birth</mat-label>
-                    <input matInput type="date">
+                    <input matInput [(ngModel)]="userReg.date" name="date" type="date">
                 </mat-form-field>
                 
                 <mat-form-field class="example-full-width">
                     <mat-label>Password</mat-label>
-                    <input matInput>
+                    <input matInput [(ngModel)]="userReg.password" name="password">
                 </mat-form-field>
                 
-                <button class="submit" routerLink="/login" mat-raised-button type="submit">Create Account</button>
+                <button class="submit" (click)="createAcc()" mat-raised-button type="submit">Create Account</button>
               </form>
         </div>
     </div>

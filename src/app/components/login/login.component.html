@@ -5,14 +5,14 @@
             <form class="example-form">
                 <mat-form-field class="example-full-width">
                   <mat-label>Email</mat-label>
-                  <input matInput placeholder="Ex. xyz@abc.com" >
+                  <input matInput [(ngModel)]="userLogin.emailId" name="emailId" placeholder="Ex. xyz@abc.com" >
                 </mat-form-field>
               
                 <mat-form-field class="example-full-width">
                   <mat-label>Password</mat-label>
-                  <input matInput>
+                  <input matInput [(ngModel)]="userLogin.password" name="password" >
                 </mat-form-field>
-                    <button class="submit" mat-raised-button routerLink="" type="submit">Log In</button>
+                    <button class="submit" mat-raised-button (click)="login()"  type="submit">Log In</button>
                     <button class="register" routerLink="/register" mat-raised-button >Register</button>
               </form>
         </div>
