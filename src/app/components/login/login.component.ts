@@ -18,7 +18,8 @@ export class LoginComponent implements OnInit {
   }
   login(){
     this.service.login(this.userLogin).subscribe((data:any)=>{
-      console.log(data);
+      console.log(data.object);
+      this.service.LoginId(data.object);
       this.router.navigate([""])
     })
   }

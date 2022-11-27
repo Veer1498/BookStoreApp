@@ -8,6 +8,6 @@
       <div><img class="search-logo" src="https://img.icons8.com/emoji/2x/magnifying-glass-tilted-left-emoji.png" alt="search logo"></div>
       <div class="cart-name" (click)="goCart()">Cart</div>
       <div><img class="cart-logo" src="../../../assets/supermarket.svg" (click)="goCart()" alt="cart logo"></div>
-      <div class="login" routerLink="login">Log In</div>
+      <div class="login" (click)="onLog()">{{loginDetails}}</div>
     </div>
 </header>

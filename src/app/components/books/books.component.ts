@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { BookModule } from 'src/app/model/book/book.module';
+import { CartModule } from 'src/app/model/cart/cart.module';
 import { BooksService } from 'src/app/services/books.service';
+import { CartService } from 'src/app/services/cart.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-books',
@@ -9,7 +12,9 @@ import { BooksService } from 'src/app/services/books.service';
 })
 export class BooksComponent implements OnInit {
 
-  constructor(private service:BooksService) { }
+  constructor(private userSer:UserService,
+              private service:BooksService,
+              private cartServ:CartService) { }
   book:BookModule = new BookModule("","","",0,0);
   
   list:any;
@@ -21,11 +26,17 @@ export class BooksComponent implements OnInit {
       console.log(data);
     })
   }
+
+  cart:CartModule= new CartModule(0,0)
+
   button :string= "Add to Cart"
-  onAdd(){
-      this.button = "ADDED"
+  onAdd(bookId:Number){
+    this.cart.bookId = bookId;
+    this.cart.quantity = 1;
+    this.cartServ.addCart(this.userSer.userId,this.cart).subscribe((data:any) =>{
+      console.log(data);
+    })
+    this.button = "ADDED"
   }
-  onMouseOver(){
-    alert("Hello")
-  }
+  
 }
