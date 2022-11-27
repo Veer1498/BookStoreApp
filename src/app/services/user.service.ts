@@ -15,4 +15,10 @@ export class UserService {
   login(userLogin:any){
     return this.http.post("http://localhost:8084/user/login",userLogin);
   }
+
+  public userId:Number = 0;
+  LoginId(id:Number){
+    this.userId=id;
+    window.localStorage.setItem("userId",""+this.userId)
+  }
 }

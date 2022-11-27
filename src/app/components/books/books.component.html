@@ -16,7 +16,7 @@
                 <div class="book-title">{{book.bookName}}</div>
                 <div class="auther-name">By {{book.bookAuthor}}</div>
                 <div class="book-price">Rs.{{book.bookPrice}}</div>
-                <button class="add-to-cart actions" mat-stroked-button (click)="onAdd()">{{button}}</button>
+                <button class="add-to-cart actions" id="{{book.bookId}}" mat-stroked-button (click)="onAdd(book.bookId)">{{button}}</button>
                 <button class="wishlist actions" mat-stroked-button>WishList</button>
                 </div>
             </mat-card-content>
